@@ -11,12 +11,6 @@ A powerful and flexible TypeScript wrapper for the OpenAI API that provides enha
 - 🔄 Multiple response formats (JSON, CSV, text)
 - ⚡ Promise-based async/await API
 
-## Installation
-
-```bash
-npm install @smootai/openai
-```
-
 ## Usage
 
 ### Chat Completions
