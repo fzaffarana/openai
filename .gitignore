@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Hooks (auto-installed)
+.husky
+
+# Typescript & NodeJS
+*.d.ts
+node_modules
+tsconfig.tsbuildinfo
+/dist
+
+# Tests
+!jest.config.js
+
+# Temporary files
+tmp

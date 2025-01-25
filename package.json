@@ -1,0 +1,45 @@
+{
+  "name": "@smootai/openai",
+  "version": "1.2.0",
+  "description": "Our OpenAI wrapper library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smootai/openai.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "compile": "tsc --pretty",
+    "format": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'",
+    "prepublishOnly": "npm run build",
+    "semantic-release": "semantic-release",
+    "test": "jest --passWithNoTests && npm run build",
+    "update-deps": "ncu -u"
+  },
+  "dependencies": {
+    "@smootai/lambda-middlewares": "^5.4.3",
+    "json-2-csv": "^5.5.1",
+    "lodash": "^4.17.21",
+    "openai": "^4.65.0"
+  },
+  "devDependencies": {
+    "@smootai/commitlint-config": "^1.0.11",
+    "@smootai/eslint-config": "^2.0.6",
+    "@smootai/git-hooks": "^1.0.19",
+    "@smootai/jest-config": "^2.1.0",
+    "@smootai/prettier-config": "^1.0.8",
+    "@smootai/semantic-release-config": "^1.0.21",
+    "@smootai/ts-config": "^2.1.0",
+    "@types/lodash": "^4.17.5",
+    "npm-check-updates": "^16.14.20",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
