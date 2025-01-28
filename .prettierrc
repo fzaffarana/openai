@@ -1,1 +1,18 @@
-"@smootai/prettier-config"
+{
+  "printWidth": 100,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "trailingComma": "all",
+  "useTabs": false,
+  "tabWidth": 2,
+  "spaceBeforeFunctionParen": false,
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}

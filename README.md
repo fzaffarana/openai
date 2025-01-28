@@ -16,7 +16,7 @@ A powerful and flexible TypeScript wrapper for the OpenAI API that provides enha
 ### Chat Completions
 
 ```typescript
-import { runPrompt } from '@smootai/openai';
+import { runPrompt } from 'openai';
 
 // Simple text completion
 const response = await runPrompt('What is the capital of France?', {
@@ -50,7 +50,7 @@ const chatResponse = await runPrompt(
 ### Image Generation
 
 ```typescript
-import { generateImage } from '@smootai/openai';
+import { generateImage } from 'openai';
 
 // Generate an image with DALL·E 3
 const imageResponse = await generateImage('A serene landscape with mountains at sunset', {

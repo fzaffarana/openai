@@ -1,8 +1,7 @@
 import OpenAI from 'openai';
 
-import { float } from '@smootai/lambda-middlewares';
-
-import { ImageConfig, ImageUsage, OpenAIResponse } from './types';
+import type { ImageConfig, ImageUsage, OpenAIResponse } from './types';
+import { float } from './utils/float';
 import { IMAGE_PRICES } from './utils/prices';
 
 const DEFAULT_TIMEOUT = 50000;

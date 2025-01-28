@@ -13,7 +13,7 @@ function findPartialJson(input: string): Record<string, unknown> {
 
   try {
     return JSON.parse(jsonString);
-  } catch (err) {
+  } catch {
     return {};
   }
 }

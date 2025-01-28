@@ -1,9 +1,8 @@
 import { csv2json } from 'json-2-csv';
 import OpenAI from 'openai';
 
-import { float } from '@smootai/lambda-middlewares';
-
-import { CompletionConfig, CompletionUsage, OpenAIResponse } from './types';
+import type { CompletionConfig, CompletionUsage, OpenAIResponse } from './types';
+import { float } from './utils/float';
 import { findFirstValidJson } from './utils/json';
 import { COMPLETION_PRICES } from './utils/prices';
 

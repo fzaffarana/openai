@@ -1,10 +1,11 @@
 {
-  "name": "@smootai/openai",
+  "name": "openai",
+  "type": "module",
   "version": "1.2.0",
-  "description": "Our OpenAI wrapper library",
+  "description": "OpenAI wrapper library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/smootai/openai.git"
+    "url": "https://github.com/fzaffarana/openai.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,32 +13,38 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf ./dist && tsc && tsc-alias --resolve-full-paths",
     "compile": "tsc --pretty",
     "format": "prettier --write 'src/**/*.ts'",
     "lint": "eslint 'src/**/*.ts'",
     "prepublishOnly": "npm run build",
-    "semantic-release": "semantic-release",
     "test": "jest --passWithNoTests && npm run build",
     "update-deps": "ncu -u"
   },
   "dependencies": {
-    "@smootai/lambda-middlewares": "^5.4.3",
+    "bignumber.js": "^9.1.2",
+    "eslint": "^9.19.0",
     "json-2-csv": "^5.5.1",
     "lodash": "^4.17.21",
-    "openai": "^4.65.0"
+    "openai": "^4.65.0",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@smootai/commitlint-config": "^1.0.11",
-    "@smootai/eslint-config": "^2.0.6",
-    "@smootai/git-hooks": "^1.0.19",
-    "@smootai/jest-config": "^2.1.0",
-    "@smootai/prettier-config": "^1.0.8",
-    "@smootai/semantic-release-config": "^1.0.21",
-    "@smootai/ts-config": "^2.1.0",
     "@types/lodash": "^4.17.5",
     "npm-check-updates": "^16.14.20",
-    "typescript": "^5.4.5"
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@typescript-eslint/eslint-plugin": "8.19.0",
+    "@typescript-eslint/parser": "8.19.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
+    "tsc-alias": "^1.8.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "rimraf": "^6.0.1"
   },
   "publishConfig": {
     "access": "restricted"
